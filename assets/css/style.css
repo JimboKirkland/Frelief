@@ -22,5 +22,16 @@ body {
   width: 50%;
 }
 #in-need {
-  width: 50%;
+width: 50%;
+}
+.button {
+  border: 5px solid #fafafa;
+  width: auto;
+  border-radius: 25px;
+  margin: 50px;
+  padding: 50px;
+}
+.button:hover {
+  background-color: #fafafa;
+  cursor: pointer;
 }
