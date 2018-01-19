@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Provider Input Form</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- provider entry container -->
+    <div class="container">
+
+      <!-- Jumbotron -->
+      <div class="jumbotron" style="background-color: grey; color: white">
+        <h1 class="text-center">FreLief Entry Form</h1>
+        <h3 class="text-center">CHENDERSON: Temporary Input Form TO TEST RECORD INSERT</h3>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-12">
+
+        <!-- providers -->
+          <div class="panel panel-primary">
+            <div class="panel-heading" style="background-color: grey; color:white">
+              <h3 class="panel-title" style="background-color: grey; color:white"><strong>Provider Data</strong></h3>
+            </div>
+            <div class="panel-body">
+              <table class="table table-hover" id='provider-table'>
+                <thead>
+                  <tr>
+                    <th>Contact Name</th>
+                    <th>Name of Org</th>
+                    <th>Services Offered</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Additional Offerings</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Add providers  -->
+          <div class="panel panel-primary">
+            <div class="panel-heading" style="background-color: grey; color:white">
+              <h3 class="panel-title" ><strong>Add Provider Details</strong></h3>
+            </div>
+            <div class="panel-body">
+
+              <!-- Entry Form -->
+              <form>
+                <div class="form-group">
+                  <label for="contact-name-input">Contact Name</label>
+                  <input class="form-control" id="contact-name-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="org-input">Name of Org</label>
+                  <input class="form-control" id="org-input" type="text">
+                </div>
+
+                <div class="form-group">
+                  <label for="servicesOffer-input">Services Offered</label>
+                        <select name="Services" class="form-control" id="servicesOffer-input" style="width:250px">
+                            <option value="Weather">Weather Related</option>
+                            <option value="Survival">Survival Gear</option>
+                            <option value="Shelter">Shelter</option>
+                            <option value="Medical">Clothing</option>
+                            <option value="Medical">Food and Beverages</option>
+                            <option value="Medical">Health Services</option>
+                            <option value="Medical">Technology</option>
+                            <option value="Medical">Emergency Services</option>
+                            <option value="Medical">Medical</option>
+                        </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="address-input">Address</label>
+                  <input class="form-control" id="address-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="city-input">City</label>
+                  <input class="form-control" id="city-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="state-input">State</label>
+                  <input class="form-control" id="state-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="zip-input">Zip</label>
+                  <input class="form-control" id="zip-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="phonenum-input">Phone Number</label>
+                  <input class="form-control" id="phonenum-input" type="text">
+                </div>                
+                <div class="form-group">
+                  <label for="email-input">Email</label>
+                  <input class="form-control" id="email-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="addtlOffer-input">Additional Offerings</label>
+                  <input class="form-control" id="addtlOffer-input" type="text">
+                </div>
+
+                <div class="form-group">
+                  <label for="image-input">Upload Image</label>
+                  <input class="form-control" id="image-input" type="file" name="providerPic">
+                </div>
+         
+                <button class="btn btn-primary" id="add-provider-btn" style="background-color: grey; color:white" type="submit">Add</button>
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Call JavaScript for freLief input-->
+    <script src="freliefLogic.js"></script>
+
+  </body>
+
+</html>
