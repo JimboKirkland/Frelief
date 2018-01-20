@@ -1,0 +1,17 @@
+@media screen and (max-width: 479px) {
+  html {
+    height: 97%;
+  }
+  body {
+    height: 100%;
+    font-family: 'Hind', sans-serif;
+  }
+  .flex-container {
+    height: 100%;
+    font-size: 30px;
+  }
+  .button {
+    margin: 10px;
+    padding: 10px;
+  }
+}
