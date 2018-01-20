@@ -17,7 +17,21 @@ $("#button").on("click", function(event) {
       search = $("#search").val().trim();
       
     // Change what is saved in firebase
+   	  database.ref().orderByChild(search).limitToLast(1).on("child_added", function(childSnapshot) {
+      // full list of items to the well
+      searchquery = childSnapshot.val().search;
+      $("#search").text("searchquery");
+		});
+
+$("#buttons").on("click", function(event) {
+      // Prevent the page from refreshing
+      event.preventDefault();
+ // Get inputs
+      provide = $("#provide").val().trim();
+      
+    // Change what is saved in firebase
    	  database.ref().push ({
+   	  	itemProvided: provide
 				
 			}) 
 		});
