@@ -1,0 +1,238 @@
+body {
+  background-color: rgb(6, 34, 69);
+  font: 400 0.813em/1.38 Muli;
+  color: rgb(6, 34, 69);
+}
+
+.back4_btn {
+  position: absolute;
+  top: 10px;
+  left: 5%;
+  z-index: 29;
+  width: 7.646484375%;
+  height: 27px;
+  background-image: url('../images/keyboard_arrow_left_black_48px.svg');
+  background-repeat: no-repeat;
+  background-size: 8px 13px;
+  background-position: center center;
+}
+
+.container {
+  float: left;
+  height: 55px;
+}
+
+.container .text {
+  height: 15px;
+  font-size: 0.923em;
+  color: rgb(0, 104, 163);
+}
+
+.text {
+  float: left;
+}
+
+._button {
+  display: block;
+  float: left;
+  clear: both;
+  width: 90%;
+  height: 35px;
+  margin: 25px 0 0 5%;
+  border-radius: 3px;
+  background-color: rgb(0, 74, 115);
+  font-size: 1.077em;
+  text-align: center;
+  color: rgb(0, 163, 255);
+}
+
+._button:active,
+._button:hover {
+  background-color: rgb(0, 163, 255);
+  color: rgb(6, 34, 69);
+}
+
+._input {
+  display: block;
+  float: left;
+  clear: both;
+  width: 100%;
+  height: 35px;
+  margin-top: 5px;
+  padding: 0 10px;
+  background-color: rgb(5, 27, 55);
+  font-size: 1em;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+._select {
+  display: block;
+  float: left;
+  clear: both;
+  width: 90%;
+  height: 36px;
+  margin: 20px 0 0 5%;
+  padding-left: 10px;
+  border-radius: 3px;
+  background: url('../images/select-arrows.svg') rgb(0, 104, 163);
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  background-position: right center;
+  font-size: 1em;
+  color: rgb(6, 34, 69);
+}
+
+.container-1 {
+  clear: both;
+  width: 90.1171875%;
+  margin: 30px 0 0 5%;
+}
+
+.container-10 {
+  clear: both;
+  width: 90%;
+  margin: 20px 0 0 5%;
+}
+
+.container-2 {
+  width: 48.7889273356%;
+}
+
+.container-3 {
+  width: 48.7889273356%;
+  margin-left: 2.19983%;
+}
+
+.container-5 {
+  clear: both;
+  width: 89.94140625%;
+  margin: 11px 0 0 5%;
+}
+
+.container-6 {
+  width: 31.9444444444%;
+}
+
+.container-7 {
+  width: 31.9444444444%;
+  margin-left: 2.04126%;
+}
+
+.container-8 {
+  width: 31.9444444444%;
+  margin-left: 2.05212%;
+}
+
+.container-4,
+.container-9 {
+  clear: both;
+  width: 90%;
+  margin: 10px 0 0 5%;
+}
+
+.text-1 {
+  position: relative;
+  z-index: 1;
+  width: 53.75%;
+  height: 30px;
+  min-height: 30px;
+  margin: 10px 0 0 23.125%;
+  font-size: 1.231em;
+  color: rgb(184, 233, 134);
+  overflow: hidden;
+}
+
+.text-2,
+.text-3 {
+  width: 141px;
+  margin-left: -0.22212%;
+}
+
+.text-5,
+.text-6,
+.text-7 {
+  width: 92px;
+  margin-left: -0.06798%;
+}
+
+.text-4,
+.text-8,
+.text-9 {
+  width: 288px;
+}
+
+.text em {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-style: normal;
+  text-transform: inherit;
+  text-decoration: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+}
+
+.text a,
+.text span,
+.text strong {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+}
+
+.text-1 em {
+  font-size: inherit;
+  font-weight: 300;
+}
+
+.text-8 em {
+  font-size: 0.833em;
+  font-weight: inherit;
+}
+
+.text-2 em,
+.text-3 em,
+.text-4 em,
+.text-5 em,
+.text-6 em,
+.text-7 em,
+.text-9 em {
+  font-size: 0.769em;
+  font-weight: inherit;
+}
