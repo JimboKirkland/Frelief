@@ -7,17 +7,24 @@
   <link href="http://fonts.googleapis.com/css?family=Muli:400,400,300|Montserrat:400,300" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/standardize.css">
   <link rel="stylesheet" href="css/search_pg.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
 </head>
 <body class="body page-search_pg clearfix">
   <div class="element element-1 clearfix">
     <div id="back2_btn" class="back3_btn js-back2_btn"></div>
     <p id="searchHead" class="textsearch js-search-head">Search for Need</p>
     <div class="container clearfix">
-      <input id="searchInput" class="_input js-search-input" name="Search" type="search">
-      <button id="search_Btn" class="_button js-search_-btn"></button>
+      <input s id="address" class="_input js-search-input" name="Search" type="search">
+      <button  id="submit" class="_button js-search_-btn"></button>
     </div>
     <p id="sUp_alerts" class="textsignupalerts js-s-up_alerts"><a target="_blank">Sign up for alerts here</a></p>
   </div>
+   <div id="floating-panel">
+    
+    </div>
+    <div id="map"></div>
+   
   <div id="providerPanelBox" class="providerpanelbox clearfix js-provider-panel-box">
     <div id="provider_panel" class="provider_panel clearfix js-provider_panel">
       <div id="provider_img" class="providerimg js-provider_img"></div>
@@ -28,6 +35,13 @@
     </div>
   </div>
 
-  <script src="js/jquery-min.js"></script>
+<!-- GOOGLE MAPS API -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrJU3Qp2zf2WsDRs4FAfaGl7lUaHD32TI&callback=initMap"></script>
+
+<script type="text/javascript"  src="assets/js/freLiefLogic.js"></script>
+ <script type="text/javascript" src="googleScripts.js"></script>
+ <script type="text/javascript"  src="assets/js/firebaseMarkers.js"></script>
+
+
 </body>
 </html>

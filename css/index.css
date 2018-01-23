@@ -212,7 +212,7 @@ body {
 }
 
 #map {
-  height: auto;
-  width: 80%;
+  height: 200px;
+  width: 300px;
   z-index: 1000;
 }
