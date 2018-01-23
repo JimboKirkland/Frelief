@@ -21,7 +21,8 @@ $("#button").on("click", function(event) {
       // full list of items to the well
       searchquery = childSnapshot.val().search;
       $("#search").text("searchquery");
-		});
+		})
+   	});
 
 $("#buttons").on("click", function(event) {
       // Prevent the page from refreshing
