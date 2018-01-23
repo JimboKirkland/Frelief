@@ -1,0 +1,16 @@
+#log-in-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 90%;
+}
+#sign-up {
+  border: 3px solid #fafafa;
+  border-radius: 10px;
+  padding: 5px;
+}
+#sign-up:hover {
+  background-color: #fafafa;
+  cursor: pointer;
+}
