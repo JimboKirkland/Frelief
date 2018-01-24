@@ -7,27 +7,51 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -34.397, lng: 120.644},
-          zoom: 6
+          zoom: 6 
         });
         infoWindow = new google.maps.InfoWindow;
 
         var geocoder = new google.maps.Geocoder();
 
-  document.getElementById('submit').addEventListener('click', function() {
+ /* document.getElementById('submit').addEventListener('click', function() {
     geocodeAddress(geocoder, map);
-  });
+  });*/
+  window.onload =  geocodeAddress(geocoder, map);
 }
 
 function geocodeAddress(geocoder, resultsMap) {
   database.ref().on("child_added", function(childSnapshot) {
   var address = childSnapshot.val().address;
+   var contactName = childSnapshot.val().contactName;
+   var contentString = '<div id="providerPanelBox" class="providerpanelbox clearfix js-provider-panel-box">'+
+            '<div id="provider_panel" class="provider_panel clearfix js-provider_panel">'+
+            ' <div id="provider_img" class="providerimg js-provider_img">'+
+            '</div>' +
+            '<div id="bodyContent">'+
+            '<div id="provider_info" class="element js-provider_info">' +
+            ' <p id="provider_miles" class="provider_miles js-provider_miles"><em>'+ contactName+ '</em></p>'+
+            ' <p id="provider_heading" class="provider_heading js-provider_heading">Name of Service provider here</p>'+
+            ' </div>'+
+            '</div>'+
+            '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+
   geocoder.geocode({'address': address}, function(results, status) {
     if (status === 'OK') {
       resultsMap.setCenter(results[0].geometry.location);
       var marker = new google.maps.Marker({
         map: resultsMap,
-        position: results[0].geometry.location
+        position: results[0].geometry.location,
+        title: contactName
       });
+       marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
     }
