@@ -14,6 +14,7 @@ var database = firebase.database();
 //Click search button
 $("#search-button").on("click", function(event) {
  event.preventDefault();
+ $("#post-container").html(" ");
 
  console.log($("#categories").val())
  search = $("#categories").val();
@@ -28,17 +29,6 @@ $("#search-button").on("click", function(event) {
      state = childSnapshot.val().state;
      zip = childSnapshot.val().zip;
      phonenum = childSnapshot.val().phonenum;
-
-  // $("#search-table > tbody").append(
-  //   "<tr><td>" + contactName +
-  //     "</td><td>" + nameOfOrganization +
-  //     "</td><td>" + servicesOffered +
-  //     "</td><td>" + address +
-  //     "</td><td>" + city +
-  //     "</td><td>" + state +
-  //     "</td><td>" + zip +
-  //     "</td><td>" + phonenum +
-  //   "</td></tr>");
 
   $("#post-container").append(
     "<div class='post'>"+
