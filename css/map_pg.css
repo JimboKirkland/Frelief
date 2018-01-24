@@ -115,3 +115,8 @@ body {
 .element-5 {
   margin-left: 4.9951171875%;
 }
+#map{
+  height: 300px;
+  width: 1200px;
+  margin: auto;
+}
