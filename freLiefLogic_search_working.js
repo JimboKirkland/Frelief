@@ -64,7 +64,7 @@ $("#categories").on("change", function(){
         "<div class='data'>"+
           "<p>" + servicesOffered + "</p>"+
           "<p>" + contactName + "</p>"+
-          "<p>" + userId + "</p>"+
+          "<p>" + address + "</p>"+
           "</div></div></div>"
         )
     }
