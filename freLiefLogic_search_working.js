@@ -40,7 +40,7 @@ $("#categories").on("change", function(){
      servicesOffered = snap.val().servicesOffered;
      address = snap.val().address;
 
-  $("#post-container").append(
+  $("#post-container").prepend(
     "<div class='post'>"+
       "<div class='img'></div>"+
       "<div class='data'>"+
@@ -54,7 +54,7 @@ $("#categories").on("change", function(){
      servicesOffered = snap.val().servicesOffered;
      address = snap.val().address;
 
-  $("#post-container").append(
+  $("#post-container").prepend(
     "<div class='post'>"+
       "<div class='img'></div>"+
       "<div class='data'>"+
