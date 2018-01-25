@@ -50,12 +50,8 @@ body {
   background-position: right center;
 }
 
-#search-button {
-  width: 15px;
-  margin: 5px;
-}
-
 #post-container {
+  display: none;
   position: fixed;
   bottom: 0;
   top: 125px;

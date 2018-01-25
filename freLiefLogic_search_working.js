@@ -10,21 +10,14 @@ var config = {
 
 firebase.initializeApp(config);
 var database = firebase.database();
-
 var search = $("#categories").val();
 
 //Auto populate
-database.ref().orderByChild(search).limitToLast(10).on("child_added", function(childSnapshot) {
-    contactName = childSnapshot.val().contactName;
-    nameOfOrganization = childSnapshot.val().nameOfOrganization;
-    servicesOffered = childSnapshot.val().servicesOffered;
-    address = childSnapshot.val().address;
-    city = childSnapshot.val().city;
-    state = childSnapshot.val().state;
-    zip = childSnapshot.val().zip;
-    phonenum = childSnapshot.val().phonenum;
-
- $("#post-container").append(
+database.ref().limitToLast(10).on("child_added", function(snap) {
+    contactName = snap.val().contactName;
+    servicesOffered = snap.val().servicesOffered;
+    address = snap.val().address;
+ $("#post-container").prepend(
    "<div class='post'>"+
      "<div class='img'></div>"+
      "<div class='data'>"+
@@ -32,25 +25,34 @@ database.ref().orderByChild(search).limitToLast(10).on("child_added", function(c
        "<p>" + contactName + "</p>"+
        "<p>" + address + "</p>"+
        "</div></div></div>"
-     )
-   });
+     ).slideDown("slow")
+});
 
-//Click search button
-$("#search-button").on("click", function(event) {
+//Change category
+$("#categories").on("change", function(){
  event.preventDefault();
  $("#post-container").html(" ");
  var search = $("#categories").val();
 
- database.ref().orderByChild(search).limitToLast(10).on("child_added", function(childSnapshot) {
-   if (search == childSnapshot.val().servicesOffered){
-     contactName = childSnapshot.val().contactName;
-     nameOfOrganization = childSnapshot.val().nameOfOrganization;
-     servicesOffered = childSnapshot.val().servicesOffered;
-     address = childSnapshot.val().address;
-     city = childSnapshot.val().city;
-     state = childSnapshot.val().state;
-     zip = childSnapshot.val().zip;
-     phonenum = childSnapshot.val().phonenum;
+ database.ref().limitToLast(10).on("child_added", function(snap) {
+   if (search == "all"){
+     contactName = snap.val().contactName;
+     servicesOffered = snap.val().servicesOffered;
+     address = snap.val().address;
+
+  $("#post-container").append(
+    "<div class='post'>"+
+      "<div class='img'></div>"+
+      "<div class='data'>"+
+        "<p>" + servicesOffered + "</p>"+
+        "<p>" + contactName + "</p>"+
+        "<p>" + address + "</p>"+
+        "</div></div></div>"
+      )
+   } else if (search == snap.val().servicesOffered){
+     contactName = snap.val().contactName;
+     servicesOffered = snap.val().servicesOffered;
+     address = snap.val().address;
 
   $("#post-container").append(
     "<div class='post'>"+
