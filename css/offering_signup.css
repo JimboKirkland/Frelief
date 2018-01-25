@@ -65,8 +65,7 @@ button {
 }
 
 .third {
-  width: 32%;
-  margin-left: .25em;
+  width: calc(100%/3);
   float: left;
 }
 
