@@ -26,12 +26,12 @@ body {
 
 #back {
   position: absolute;
+  top: 23px;
   left: 20px;
   width: 20px;
   }
 
 #title {
-  align-self: center;
   font-size: 30px;
 }
 

@@ -11,333 +11,69 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 125px;
-  background-color: rgb(230, 230, 230);
+  height: 100%;
 }
 
-#back-title {
+#header {
   width: 100%;
-  padding: 20px 0 10px;
+  height: 80px;
   display: flex;
+  align-items: center;
   justify-content: center;
+  background-color: rgb(230, 230, 230);
 }
 
 #back {
   position: absolute;
+  top: 23px;
   left: 20px;
   width: 20px;
   }
 
 #title {
-  align-self: center;
   font-size: 30px;
 }
 
-.container {
-  float: left;
-  height: 55px;
+#form-container {
+  padding: 10px 10px 0;
+  width: 100%;
 }
 
-.container .text {
-  height: 15px;
-  font-size: 1em;
-  color: rgb(0, 104, 163);
-}
-
-.element .text {
-  width: 44.4444444444%;
-  min-height: 16px;
-  margin: 14px 0 0 8.49067%;
-  font-size: 1em;
-  color: rgb(0, 74, 115);
-  overflow: hidden;
-}
-
-.text {
-  float: left;
-}
-
-._button {
-  display: block;
-  float: left;
-  border-radius: 3px;
-  text-align: center;
-}
-
-._button:hover {
-  color: rgb(6, 34, 69);
-}
-
-._element {
-  position: relative;
-  float: left;
-  clear: both;
-  z-index: 36;
-  width: 95px;
-  height: 78px;
-  margin: 7px 0 0 8.32791%;
-  border: 1px solid rgb(0, 74, 115);
-  background-color: rgb(4, 21, 43);
-}
-
-._input {
-  display: block;
-  float: left;
-  clear: both;
-  height: 35px;
-  margin-top: 5px;
-  padding: 0 10px;
-  background-color: rgb(5, 27, 55);
-  font-size: 1.083em;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
+input {
+  margin: 5px 0;
+  width: 100%;
+  border: 2px solid #f8f8f8;
 }
 
 select {
-  display: block;
-  float: left;
-  clear: both;
-  width: 90%;
-  height: 36px;
-  margin: 15px 0 0 5%;
-  padding-left: 10px;
   border-radius: 3px;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
   background: url('../images/select-arrows.svg') #F8F8F8;
   background-repeat: no-repeat;
   background-size: auto auto;
   background-position: right center;
-  font-size: 1.083em;
-  color: rgb(6, 34, 69);
 }
 
-.element button {
-  width: 34.0277777777%;
-  height: 27px;
-  margin: 30px 0 0 16.17839%;
-  background-color: rgb(0, 104, 163);
-  font-size: 1em;
-  color: rgb(0, 0, 0);
-}
-
-.element button:hover {
-  background-color: rgb(184, 233, 134);
-}
-
-.container-1 {
-  clear: both;
-  width: 90.1171875%;
-  margin: 30px 0 0 5%;
-}
-
-.container-10 {
-  clear: both;
-  width: 90%;
-  margin: 10px 0 0 5%;
-}
-
-.container-11,
-.container-4,
-.container-5 {
-  clear: both;
-  width: 90%;
-  margin: 15px 0 0 5%;
-}
-
-.container-12 {
-  position: relative;
-  clear: both;
-  z-index: 34;
-  width: 28.7499999999%;
-  margin: 15px 0 0 5%;
-}
-
-.container-13 {
-  position: relative;
-  z-index: 31;
-  width: 28.7499999999%;
-  margin: 15px 0 0 1.83594%;
-}
-
-.container-2 {
-  width: 48.7889273356%;
-}
-
-.container-3 {
-  width: 48.7889273356%;
-  margin-left: 2.19983%;
-}
-
-.container-6 {
-  clear: both;
-  width: 89.94140625%;
-  margin: 11px 0 0 5%;
-}
-
-.container-7 {
-  width: 31.9444444444%;
-}
-
-.container-8 {
-  width: 31.9444444444%;
-  margin-left: 2.04126%;
-}
-
-.container-9 {
-  width: 31.9444444444%;
-  margin-left: 2.05212%;
-}
-
-.element-1 {
-  width: 288px;
-  height: 134px;
-  margin: 610px auto 0;
-  border-radius: 5px;
-  background-color: rgb(5, 27, 55);
-}
-
-.text-1 {
-  position: relative;
-  z-index: 1;
-  width: 67.5%;
-  height: 30px;
-  min-height: 30px;
-  margin: 10px 0 0 16.38672%;
-  font-size: 1.333em;
-  color: rgb(184, 233, 134);
-}
-
-.text-10,
-.text-4,
-.text-5,
-.text-9 {
-  width: 288px;
-}
-
-.text-11,
-.text-12 {
-  width: 92px;
-}
-
-.text-2,
-.text-3 {
-  width: 141px;
-  margin-left: -0.22212%;
-}
-
-.text-6,
-.text-7,
-.text-8 {
-  width: 92px;
-  margin-left: -0.06798%;
-}
-
-._button-2 {
-  clear: both;
-  width: 90%;
-  height: 35px;
-  margin: 25px 0 0 5%;
-  background-color: rgb(0, 74, 115);
-  font-size: 1.167em;
-  color: rgb(0, 163, 255);
-}
-
-._button-2:hover {
-  background-color: rgb(0, 163, 255);
-}
-
-._button-2:active {
-  background-color: rgb(0, 163, 255);
-  color: rgb(6, 34, 69);
-}
-
-.container ._input-10,
-.container ._input-11 {
-  width: 101.0869565217%;
-  margin-left: -1.08696%;
-}
-
-.container ._input-1,
-.container ._input-2,
-.container ._input-3,
-.container ._input-4,
-.container ._input-5,
-.container ._input-6,
-.container ._input-7,
-.container ._input-8,
-.container ._input-9 {
+button {
   width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: rgb(230, 230, 230);
 }
 
-.text em {
-  border-top-width: 0;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0;
-  border-color: transparent;
-  border-style: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: transparent;
-  font-family: inherit;
-  font-style: normal;
-  text-transform: inherit;
-  text-decoration: inherit;
-  letter-spacing: inherit;
-  word-spacing: inherit;
-  color: inherit;
-  opacity: 1;
-  word-break: normal;
-  word-wrap: normal;
-  white-space: normal;
+.third {
+  width: 32%;
+  margin-left: .25em;
+  float: left;
 }
 
-.text a,
-.text span,
-.text strong {
-  border-top-width: 0;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0;
-  border-color: transparent;
-  border-style: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: transparent;
-  font-family: inherit;
-  font-style: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  text-transform: inherit;
-  text-decoration: inherit;
-  letter-spacing: inherit;
-  word-spacing: inherit;
-  color: inherit;
-  opacity: 1;
-  word-break: normal;
-  word-wrap: normal;
-  white-space: normal;
-}
-
-.text-1 em {
-  font-size: inherit;
-  font-weight: 300;
-}
-
-.text-10 em,
-.text-11 em,
-.text-12 em,
-.text-2 em,
-.text-3 em,
-.text-4 em,
-.text-5 em,
-.text-6 em,
-.text-7 em,
-.text-8 em,
-.text-9 em {
-  font-size: 0.833em;
-  font-weight: inherit;
+#done {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 10px;
+  border-radius: 0;
 }

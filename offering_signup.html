@@ -10,77 +10,49 @@
 </head>
 <body>
   <div id="flex-container">
-    <div id="back-title">
-    <a href="index.html"><img id="back" src="images/keyboard_arrow_left_black_48px.svg"></a>
+    <div id="header">
+      <a href="index.html"><img id="back" src="images/keyboard_arrow_left_black_48px.svg"></a>
       <p id="title">Offer Resources</p>
     </div>
-  <div id="form-container">
-    <div class="container container-1 clearfix">
-      <div class="container container-2 clearfix">
-        <p class="text text-2">First Name</p>
-        <input class="_input _input-1" name="FirstName" type="text">
-      </div>
-      <div class="container container-3 clearfix">
-        <p class="text text-3">Last Name</p>
-        <input class="_input _input-2" name="LastName" type="text">
-      </div>
+    <div id="form-container">
+      <p>Name/Organization</p>
+      <input id="name-input" type="text">
+      <p>Product/Service</p>
+      <input id="offer-input" type="text">
+      <form>
+        <select id="category-input">
+          <option>Select Category</option>
+          <option disabled="disabled">----------</option>
+          <option value="Food & Water">Food & Water</option>
+          <option value="Clothing">Clothing</option>
+          <option value="Shelter">Shelter</option>
+          <option value="Medical">Medical</option>
+          <option value="Children's Health">Children's Health</option>
+          <option value="Tech">Tech</option>
+        </select>
+      </form>
+      <p>Address</p>
+      <input id="address-input" type="text">
+      <p>Time Lasting</p>
+      <input type="text">
+      <p class="third">City</p>
+      <p class="third">State</p>
+      <p class="third">Zip</p>
+      <input id="city-input" class="third" type="text">
+      <input id="state-input" class="third" type="text">
+      <input id="zip-input" class="third" type="text">
+      <p>Phone Number</p>
+      <input id="phone-input" type="text">
+      <!-- <p>Add image</p>
+      <button>Upload</button> -->
     </div>
-    <div class="container container-4 clearfix">
-      <p class="text text-4">Organizations Name</p>
-      <input class="_input _input-3" name="OrganizationsName" type="text">
-    </div>
-    <div class="container container-5 clearfix">
-      <p class="text text-5">Address</p>
-      <input class="_input _input-4" name="Address" type="text">
-    </div>
-    <div class="container container-6 clearfix">
-      <div class="container container-7 clearfix">
-        <p class="text text-6">City</p>
-        <input class="_input _input-5" name="City" type="text">
-      </div>
-      <div class="container container-8 clearfix">
-        <p class="text text-7">State</p>
-        <input class="_input _input-6" name="State" type="text">
-      </div>
-      <div class="container container-9 clearfix">
-        <p class="text text-8">Zip</p>
-        <input class="_input _input-7" name="Zipcode" type="text">
-      </div>
-    </div>
-    <div class="container container-10 clearfix">
-      <p class="text text-9">Phone Number</p>
-      <input class="_input _input-8" name="PhoneNumber" type="text">
-    </div>
-    <select class="_select" name="CategorySection">
-      <option value="Select Category">Select Category</option>
-      <option value="Technology">Technology</option>
-      <option value="Food & Beverages">Food & Beverages</option>
-      <option value="Clothing">Clothing</option>
-      <option value="Shelter">Shelter</option>
-      <option value="Medical">Medical</option>
-      <option value="Health & Wellness">Health & Wellness</option>
-      <option value="Childrens Health">Childrens Health</option>
-      <option value="Electrical/Power">Electrical/Power</option>
-    </select>
-    <div class="container container-11 clearfix">
-      <p class="text text-10">Enter specific service/products</p>
-      <input class="_input _input-9" name="SpecificNeed/Service" type="text">
-    </div>
-    <div class="container container-12 clearfix">
-      <p class="text text-11">Date Offering</p>
-      <input class="_input _input-10" name="Date" type="text">
-    </div>
-    <div class="container container-13 clearfix">
-      <p class="text text-12">Time</p>
-      <input class="_input _input-11" name="Time" type="text">
-    </div>
-    <div class="element element-1 clearfix">
-      <p class="text">Add image</p>
-      <div class="element _element"></div>
-      <button>Upload</button>
-    </div>
-    <button class="_button-2">Done</button>
+    <button id="done">Done</button>
   </div>
-  <script src="js/jquery-min.js"></script>
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+  <!-- Push info to datatbase -->
+  <script src="freLiefLogic.js"></script>
 </body>
 </html>
