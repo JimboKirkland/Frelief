@@ -17,15 +17,17 @@ database.ref().limitToLast(10).on("child_added", function(snap) {
     contactName = snap.val().contactName;
     servicesOffered = snap.val().servicesOffered;
     address = snap.val().address;
- $("#post-container").prepend(
-   "<div class='post'>"+
-     "<div class='img'></div>"+
-     "<div class='data'>"+
-       "<p>" + servicesOffered + "</p>"+
-       "<p>" + contactName + "</p>"+
-       "<p>" + address + "</p>"+
-       "</div></div></div>"
-     ).slideDown("slow")
+    userId = snap.key;
+
+   $("#post-container").prepend(
+     "<div class='post' value='"+userId+"'>"+
+       "<div class='img'></div>"+
+       "<div class='data'>"+
+         "<p>" + servicesOffered + "</p>"+
+         "<p>" + contactName + "</p>"+
+         "<p>" + address + "</p>"+
+         "</div></div></div>"
+       ).slideDown("slow")
 });
 
 //Change category
@@ -39,9 +41,10 @@ $("#categories").on("change", function(){
      contactName = snap.val().contactName;
      servicesOffered = snap.val().servicesOffered;
      address = snap.val().address;
+     userId = snap.key;
 
   $("#post-container").prepend(
-    "<div class='post'>"+
+    "<div class='post' value='"+userId+"'>"+
       "<div class='img'></div>"+
       "<div class='data'>"+
         "<p>" + servicesOffered + "</p>"+
@@ -53,16 +56,23 @@ $("#categories").on("change", function(){
      contactName = snap.val().contactName;
      servicesOffered = snap.val().servicesOffered;
      address = snap.val().address;
-
-  $("#post-container").prepend(
-    "<div class='post'>"+
-      "<div class='img'></div>"+
-      "<div class='data'>"+
-        "<p>" + servicesOffered + "</p>"+
-        "<p>" + contactName + "</p>"+
-        "<p>" + address + "</p>"+
-        "</div></div></div>"
-      )
+     userId = snap.key;
+     console.log(userId);
+    $("#post-container").prepend(
+      "<div class='post' value='"+userId+"'>"+
+        "<div class='img'></div>"+
+        "<div class='data'>"+
+          "<p>" + servicesOffered + "</p>"+
+          "<p>" + contactName + "</p>"+
+          "<p>" + userId + "</p>"+
+          "</div></div></div>"
+        )
     }
   });
 });
+
+//Post click
+$(".post").click(function(){
+  console.log("hello");
+  // sessionStorage.setItem('postId', $(".post").val())
+})
