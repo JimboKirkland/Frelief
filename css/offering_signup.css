@@ -1,20 +1,36 @@
+html {
+  height: 100%;
+}
 body {
-  background-color: rgb(6, 34, 69);
-  font: 400 0.75em/1.38 Muli;
-  color: rgb(0, 104, 163);
+  height: 100%;
+  font-family: 'Muli', sans-serif;
 }
 
-.back3_btn {
+#flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 125px;
+  background-color: rgb(230, 230, 230);
+}
+
+#back-title {
+  width: 100%;
+  padding: 20px 0 10px;
+  display: flex;
+  justify-content: center;
+}
+
+#back {
   position: absolute;
-  top: 10px;
-  left: 5%;
-  z-index: 42;
-  width: 7.646484375%;
-  height: 27px;
-  background-image: url('../images/keyboard_arrow_left_black_48px.svg');
-  background-repeat: no-repeat;
-  background-size: 8px 13px;
-  background-position: center center;
+  left: 20px;
+  width: 20px;
+  }
+
+#title {
+  align-self: center;
+  font-size: 30px;
 }
 
 .container {
