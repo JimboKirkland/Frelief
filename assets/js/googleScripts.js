@@ -20,7 +20,7 @@ var map, infoWindow;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 33.744513, lng: -84.390400},
-    zoom: 10
+    zoom: 7
   });
   infoWindow = new google.maps.InfoWindow;
 
@@ -38,12 +38,17 @@ function geocodeAddress(geocoder, resultsMap) {
     var contactName = childSnapshot.val().contactName;
     var servicesOffered = childSnapshot.val().servicesOffered;
     var contentString = "<div class='post'>"+
-      "<div class='img'></div>"+
+      "<div class='img'>"+
+      "<img src='assets/images/" + servicesOffered + ".png'>"+
+      "</div>"+
       "<div class='data'>"+
+      "<div class='top-nav'>"+
         "<p>" + servicesOffered + "</p>"+
+        "</div>"+
         "<p>" + contactName + "</p>"+
         "<p>" + address + "</p>"+
         "</div></div></div>";
+
             var infowindow = new google.maps.InfoWindow({
           content: contentString
         });
@@ -57,10 +62,12 @@ function geocodeAddress(geocoder, resultsMap) {
         var marker = new google.maps.Marker({
           map: resultsMap,
           position: results[0].geometry.location,
-          title: contactName
         });
          marker.addListener('click', function() {
+          
             infowindow.open(map, marker);
+          
+          
           });
 
       } else {
