@@ -7,13 +7,28 @@ body {
 }
 
 #thank-you {
-  display: none;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  align-items: center;
+}
+
+#ty {
+  position: absolute;
   height: 100%;
   width: 100%;
-  background-color: #ffffff;
-  align-items: center;
   text-align: center;
   font-size: 30px;
+  z-index: 2;
+}
+
+video {
+  position: relative;
+  height: 102%;
+  z-index: 1;
+  left: -500px;
 }
 
 #flex-container {

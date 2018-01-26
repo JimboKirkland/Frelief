@@ -11,11 +11,15 @@
 
 <body>
   <div id="post">
+    <div id="close">X</div>
     <div id="data-container">
-      <div id="post-title">Title</div>
+      <div id="post-offering">Offering</div>
+      <div id="post-date">Date</div>
+        <hr><br>
+      <div id="post-description">Description</div>
+        <br>
       <div id="post-name">Name</div>
       <div id="post-phone">Phone</div>
-      <div id="post-description">Description</div>
       <div id="post-address">Address</div>
     </div>
     <div id="map"></div>
@@ -27,7 +31,6 @@
     </div>
     Filter:
     <div id="filter">
-      <div id="right-spacer"></div>
       <form>
         <select id="categories">
           <option value="all">Select Category</option>
@@ -58,6 +61,6 @@
   <!-- Google Maps -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrJU3Qp2zf2WsDRs4FAfaGl7lUaHD32TI&callback=initMap"></script>
-  <script type="text/javascript" src="assets/js/googleScripts.js"></script>
+  <script type="text/javascript" src="assets/js/googleScripts-search-page.js"></script>
 </body>
 </html>

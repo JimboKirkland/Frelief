@@ -10,7 +10,13 @@
 </head>
 <body>
   <div id="thank-you">
-    Thank you for lending a helping hand
+    <div id="ty">
+      Thank you for lending a helping hand
+    </div>
+    <video autoplay muted loop>
+      <source src="assets/images/sun.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
   </div>
   <div id="flex-container">
     <div id="header">
@@ -35,7 +41,7 @@
         </select>
       </form>
       <p>Description</p>
-      <textarea rows="4" id="description-input"></textarea>
+      <textarea id="description-input" rows="4" maxlength="180"></textarea>
       <p>Address</p>
       <input id="address-input" type="text">
       <p class="third">City</p>
@@ -57,6 +63,8 @@
   <script src="fade.js"></script>
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+  <!-- Moment JS -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   <!-- Push info to datatbase -->
   <script src="freLiefLogic.js"></script>
 </body>

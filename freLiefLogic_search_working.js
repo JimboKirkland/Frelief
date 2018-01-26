@@ -21,16 +21,18 @@ database.ref().limitToLast(10).on("child_added", function(snap) {
     address = snap.val().address;
     city = snap.val().city;
     state = snap.val().state;
+    zip = snap.val().zip;
     phone = snap.val().phone;
-    servicesOffered = snap.val().servicesOffered;
+    date = snap.val().date;
 
    $("#post-container").prepend(
      "<div class='post' value='"+userId+"'>"+
        "<div class='img'><img src='images/"+category+".png'></div>"+
        "<div class='data'>"+
-         "<p>" + offering + "</p>"+
-         "<p>" + address + "</p>"+
+         "<div><p class='offering'>" + offering + "</p><hr><br>"+
          "<p>" + city + ", " + state + "</p>"+
+         "<p>" + zip + "</p></div>"+
+         "<p class='date'>" + date + "</p>"+
          "</div></div></div>"
        ).slideDown("slow")
 });
@@ -47,6 +49,7 @@ $("#categories").on("change", function(){
      category = snap.val().category;
      offering = snap.val().offering;
      address = snap.val().address;
+     date = snap.val().date;
      userId = snap.key;
 
      $("#post-container").prepend(
@@ -56,6 +59,7 @@ $("#categories").on("change", function(){
            "<p>" + offering + "</p>"+
            "<p>" + address + "</p>"+
            "<p>" + city + ", " + state + "</p>"+
+           "<p class='date'>" + date + "</p>"+
            "</div></div></div>"
          )
    } else if (search == snap.val().category){
@@ -63,6 +67,7 @@ $("#categories").on("change", function(){
      category = snap.val().category;
      offering = snap.val().offering;
      address = snap.val().address;
+     date = snap.val().date;
      userId = snap.key;
 
      $("#post-container").prepend(
@@ -72,6 +77,7 @@ $("#categories").on("change", function(){
            "<p>" + offering + "</p>"+
            "<p>" + address + "</p>"+
            "<p>" + city + ", " + state + "</p>"+
+           "<p class='date'>" + date + "</p>"+
            "</div></div></div>"
          )
     }

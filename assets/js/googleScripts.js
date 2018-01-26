@@ -20,7 +20,9 @@ var map, infoWindow;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 33.744513, lng: -84.390400},
-    zoom: 12
+    zoom: 12,
+    disableDefaultUI: true,
+    zoomControl: true
   });
   infoWindow = new google.maps.InfoWindow;
 
@@ -34,19 +36,22 @@ function initMap() {
 
 function geocodeAddress(geocoder, resultsMap) {
   database.ref().on("child_added", function(childSnapshot) {
+    var offering = childSnapshot.val().offering;
+    var name = childSnapshot.val().name;
+    var category = childSnapshot.val().category;
     var address = childSnapshot.val().address;
-    var contactName = childSnapshot.val().contactName;
-    var servicesOffered = childSnapshot.val().servicesOffered;
+    var city = childSnapshot.val().city;
+    var state = childSnapshot.val().state;
+    var zip = childSnapshot.val().zip;
     var contentString = "<div class='post'>"+
       "<div class='img'>"+
-      "<img src='assets/images/" + servicesOffered + ".png'>"+
+      "<img src='images/" + category + ".png'>"+
       "</div>"+
       "<div class='data'>"+
-      "<div class='top-nav'>"+
-        "<p>" + servicesOffered + "</p>"+
-        "</div>"+
-        "<p>" + contactName + "</p>"+
+        "<p class='header'>" + offering + "</p>"+
+        "<p>" + name + "</p>"+
         "<p>" + address + "</p>"+
+        "<p>" + city + ", " + state + ", " + zip + "</p>"+
         "</div></div></div>";
 
             var infowindow = new google.maps.InfoWindow({

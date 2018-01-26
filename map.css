@@ -46,11 +46,15 @@ body {
   width: 100%;
 }
 
-.top-nav{
-  font-size: 30px;
+.post {
+  width: 150px;
+}
+.header{
+  font-size: 20px;
 }
 
-/* img{
+.img{
   height: 100px;
   width:100px;
-} */
+  padding: 5px;
+}

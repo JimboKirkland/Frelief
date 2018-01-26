@@ -20,8 +20,30 @@ body {
   border-radius: 10px;
 }
 
+#close {
+  width: 100%;
+  padding: 0 5px 4px;
+  background-color: #f2f2f2;
+}
+
+#post-offering {
+  font-size: 25px;
+}
+
+#post-date {
+  color: rgb(230, 230, 230);
+  margin: 10px 0 0;
+}
+
+hr {
+  float: left;
+  width: 50%;
+  margin: 9px 0 0;
+}
+
 #data-container {
-  margin: 5px;
+  margin: 15px;
+  height: 55%;
 }
 
 #map {
@@ -102,20 +124,33 @@ body {
 
 .post {
   width: 90%;
-  height: 90px;
+  height: 120px;
   margin: 10px auto;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   display: flex;
-  cursor: pointer;
 }
 
 .img {
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   padding: 5px;
   background-color: rgb(222, 222, 222);
 }
 
+.offering {
+  font-size: 20px;
+  font-weight: 900;
+}
+
 .data {
-  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+  padding: 10px;
+}
+
+.date {
+  color: rgb(230, 230, 230);
+  align-self: flex-end;
 }
