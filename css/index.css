@@ -4,11 +4,11 @@ body {
 }
 
 #myVideo {
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom: -40px;
-    min-width: 100%;
-    min-height: 100%;
+    /* min-width: 100%; */
+    /* min-height: 100%; */
 }
 
 #flex-container{

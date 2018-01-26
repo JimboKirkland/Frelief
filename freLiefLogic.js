@@ -14,12 +14,12 @@ var database = firebase.database();
 // Button for adding provider data
 $("#done").on("click", function(event) {
   event.preventDefault();
-  console.log($('#category-input').val())
 
   // Grabs user input from the form
   var name = $("#name-input").val().trim();
   var offering = $("#offer-input").val();
-  var servicesOffered = $("#category-input").val();
+  var category = $("#category-input").val();
+  var description = $('#description-input').val();
   var address = $("#address-input").val().trim();
   var city = $("#city-input").val().trim();
   var state = $("#state-input").val().trim();
@@ -31,7 +31,8 @@ $("#done").on("click", function(event) {
   var newProvider = {
     name:  name,
     offering: offering,
-    servicesOffered:  servicesOffered,
+    category:  category,
+    description: description,
     address:  address,
     city: city,
     state:  state,
@@ -48,7 +49,7 @@ $("#done").on("click", function(event) {
   // Clears all of the text-boxes
   $("#name-input").val("");
   $("#offer-input").val("");
-  // $("#category-input").val("");
+  $("#description-input").val("");
   $("#address-input").val("");
   $("#city-input").val("");
   $("#state-input").val("");
