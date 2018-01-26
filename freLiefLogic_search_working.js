@@ -14,18 +14,23 @@ var search = $("#categories").val();
 
 //Auto populate
 database.ref().limitToLast(10).on("child_added", function(snap) {
-    contactName = snap.val().contactName;
-    servicesOffered = snap.val().servicesOffered;
-    address = snap.val().address;
     userId = snap.key;
+    offering = snap.val().offering;
+    category = snap.val().category;
+    name = snap.val().name;
+    address = snap.val().address;
+    city = snap.val().city;
+    state = snap.val().state;
+    phone = snap.val().phone;
+    servicesOffered = snap.val().servicesOffered;
 
    $("#post-container").prepend(
      "<div class='post' value='"+userId+"'>"+
-       "<div class='img'></div>"+
+       "<div class='img'><img src='images/"+category+".png'></div>"+
        "<div class='data'>"+
-         "<p>" + servicesOffered + "</p>"+
-         "<p>" + contactName + "</p>"+
+         "<p>" + offering + "</p>"+
          "<p>" + address + "</p>"+
+         "<p>" + city + ", " + state + "</p>"+
          "</div></div></div>"
        ).slideDown("slow")
 });
@@ -38,35 +43,37 @@ $("#categories").on("change", function(){
 
  database.ref().limitToLast(10).on("child_added", function(snap) {
    if (search == "all"){
-     contactName = snap.val().contactName;
-     servicesOffered = snap.val().servicesOffered;
+     name = snap.val().name;
+     category = snap.val().category;
+     offering = snap.val().offering;
      address = snap.val().address;
      userId = snap.key;
 
-  $("#post-container").prepend(
-    "<div class='post' value='"+userId+"'>"+
-      "<div class='img'></div>"+
-      "<div class='data'>"+
-        "<p>" + servicesOffered + "</p>"+
-        "<p>" + contactName + "</p>"+
-        "<p>" + address + "</p>"+
-        "</div></div></div>"
-      )
-   } else if (search == snap.val().servicesOffered){
-     contactName = snap.val().contactName;
-     servicesOffered = snap.val().servicesOffered;
+     $("#post-container").prepend(
+       "<div class='post' value='"+userId+"'>"+
+         "<div class='img'><img src='images/"+category+".png'></div>"+
+         "<div class='data'>"+
+           "<p>" + offering + "</p>"+
+           "<p>" + address + "</p>"+
+           "<p>" + city + ", " + state + "</p>"+
+           "</div></div></div>"
+         )
+   } else if (search == snap.val().category){
+     name = snap.val().name;
+     category = snap.val().category;
+     offering = snap.val().offering;
      address = snap.val().address;
      userId = snap.key;
-     console.log(userId);
-    $("#post-container").prepend(
-      "<div class='post' value='"+userId+"'>"+
-        "<div class='img'></div>"+
-        "<div class='data'>"+
-          "<p>" + servicesOffered + "</p>"+
-          "<p>" + contactName + "</p>"+
-          "<p>" + address + "</p>"+
-          "</div></div></div>"
-        )
+
+     $("#post-container").prepend(
+       "<div class='post' value='"+userId+"'>"+
+         "<div class='img'><img src='images/"+category+".png'></div>"+
+         "<div class='data'>"+
+           "<p>" + offering + "</p>"+
+           "<p>" + address + "</p>"+
+           "<p>" + city + ", " + state + "</p>"+
+           "</div></div></div>"
+         )
     }
   });
 });

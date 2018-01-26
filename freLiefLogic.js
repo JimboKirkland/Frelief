@@ -12,7 +12,7 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 // Button for adding provider data
-$("#done").on("click", function(event) {
+$("#done").on("click", function() {
   event.preventDefault();
 
   // Grabs user input from the form
@@ -25,7 +25,6 @@ $("#done").on("click", function(event) {
   var state = $("#state-input").val().trim();
   var zip = $("#zip-input").val().trim();
   var phone  = $("#phone-input").val().trim();
-
 
   // Creates local "temporary" object for holding provider data
   var newProvider = {
@@ -43,16 +42,12 @@ $("#done").on("click", function(event) {
   // Uploads provider data to the database
   database.ref().push(newProvider);
 
-  // Alert
-  alert("Provider successfully added");
+  $('#thank-you').fadeTo(1000, 1).css('display', 'flex');
+  window.setTimeout(function(){
+    $('body').fadeOut(1000, function(){
+      window.location.href = "search_pg.html"
+    });
+  }, 2000)
 
-  // Clears all of the text-boxes
-  $("#name-input").val("");
-  $("#offer-input").val("");
-  $("#description-input").val("");
-  $("#address-input").val("");
-  $("#city-input").val("");
-  $("#state-input").val("");
-  $("#zip-input").val("");
-  $("#phone-input").val("");
+
 });

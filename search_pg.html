@@ -10,6 +10,16 @@
 </head>
 
 <body>
+  <div id="post">
+    <div id="data-container">
+      <div id="post-title">Title</div>
+      <div id="post-name">Name</div>
+      <div id="post-phone">Phone</div>
+      <div id="post-description">Description</div>
+      <div id="post-address">Address</div>
+    </div>
+    <div id="map"></div>
+  </div>
   <div id="flex-container">
     <div id="back-title">
     <a href="index.html"><img id="back" src="images/keyboard_arrow_left_black_48px.svg"></a>
@@ -43,11 +53,11 @@
   <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
   <!-- Post populate JS -->
   <script type="text/javascript"  src="freLiefLogic_search_working.js"></script>
-
-<!-- GOOGLE MAPS API -->
-<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrJU3Qp2zf2WsDRs4FAfaGl7lUaHD32TI&callback=initMap"></script> -->
- <!-- <script type="text/javascript" src="assets/js/googleScripts.js"></script> -->
- <!--<script type="text/javascript" src="infowindow.js"></script>-->
- <!-- <script type="text/javascript"  src="assets/js/firebaseMarkers.js"></script> -->
+  <!-- Post click JS -->
+  <script type="text/javascript"  src="post-click.js"></script>
+  <!-- Google Maps -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrJU3Qp2zf2WsDRs4FAfaGl7lUaHD32TI&callback=initMap"></script>
+  <script type="text/javascript" src="assets/js/googleScripts.js"></script>
 </body>
 </html>

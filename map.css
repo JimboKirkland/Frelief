@@ -45,10 +45,12 @@ body {
   height: 100%;
   width: 100%;
 }
+
 .top-nav{
   font-size: 30px;
 }
-img{
+
+/* img{
   height: 100px;
   width:100px;
-}
+} */

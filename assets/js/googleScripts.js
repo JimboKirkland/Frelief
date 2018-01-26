@@ -20,7 +20,7 @@ var map, infoWindow;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 33.744513, lng: -84.390400},
-    zoom: 7
+    zoom: 12
   });
   infoWindow = new google.maps.InfoWindow;
 
@@ -64,10 +64,10 @@ function geocodeAddress(geocoder, resultsMap) {
           position: results[0].geometry.location,
         });
          marker.addListener('click', function() {
-          
+
             infowindow.open(map, marker);
-          
-          
+
+
           });
 
       } else {
