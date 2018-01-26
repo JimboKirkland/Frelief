@@ -52,7 +52,8 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(230, 230, 230);
+  background-color: #3E5E70;
+  color: #ffffff;
 }
 
 #back {
@@ -110,6 +111,7 @@ button {
 }
 
 #done {
+  background-color: #C2ECAD;
   position: absolute;
   bottom: 0;
   margin: 0;
