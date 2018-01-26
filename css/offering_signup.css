@@ -10,6 +10,7 @@ body {
   position: absolute;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -19,9 +20,13 @@ body {
 
 #ty {
   position: absolute;
-  height: 100%;
-  width: 100%;
   text-align: center;
+  align-self: center;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
   font-size: 30px;
   z-index: 2;
 }
@@ -30,7 +35,6 @@ video {
   position: relative;
   height: 102%;
   z-index: 1;
-  left: -500px;
 }
 
 #flex-container {
@@ -71,12 +75,14 @@ input {
   margin: 5px 0;
   width: 100%;
   border: 2px solid #f8f8f8;
+  transition: all .2s ease-in;
 }
 
 textarea {
   margin: 5px 0;
   width: 100%;
   border: 2px solid #f8f8f8;
+  transition: all .2s ease-in;
 }
 
 select {
@@ -86,8 +92,8 @@ select {
   margin: 5px 0;
   background: url('../images/select-arrows.svg') #F8F8F8;
   background-repeat: no-repeat;
-  background-size: auto auto;
   background-position: right center;
+  transition: all .2s ease-in;
 }
 
 button {
