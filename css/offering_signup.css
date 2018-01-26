@@ -9,10 +9,12 @@ body {
 #thank-you {
   position: absolute;
   display: flex;
+  align-items: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  align-items: center;
+  display: none;
+  z-index: 1;
 }
 
 #ty {

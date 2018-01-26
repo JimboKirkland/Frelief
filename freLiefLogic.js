@@ -44,12 +44,12 @@ $("#done").on("click", function() {
   // // Uploads provider data to the database
   // database.ref().push(newProvider);
 
-  // $('#thank-you').fadeTo(1000, 1).css('display', 'flex');
-  // window.setTimeout(function(){
-  //   $('body').fadeOut(1000, function(){
-  //     window.location.href = "search_pg.html"
-  //   });
-  // }, 2000)
+  $('#thank-you').fadeTo(1000, 1).css('display', 'flex');
+  window.setTimeout(function(){
+    $('body').fadeOut(1000, function(){
+      window.location.href = "search_pg.html"
+    });
+  }, 2000)
 
 
 });
