@@ -70,11 +70,11 @@ function geocodeAddress(geocoder, resultsMap) {
         });
          marker.addListener('click', function() {
            console.log(this)
-        // if (this.visible == false){
-        //   infowindow.open(map, marker);
-        // } else {
-        //   infowindow.close(map, marker);
-        // }
+        if (this.visible == false){
+          infowindow.open(map, marker);
+        } else {
+          infowindow.close(map, marker);
+        }
           });
 
       } else {
