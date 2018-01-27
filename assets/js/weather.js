@@ -1,7 +1,7 @@
 var APIKey = "69112145ca09c1f0";
 
 // Here we are building the URL we need to query the database
-var queryURL = "http://api.wunderground.com/api/"+APIKey+"/conditions/q/GA/Atlanta.json";
+var queryURL = "https://api.wunderground.com/api/"+APIKey+"/conditions/q/GA/Atlanta.json";
 
 // Here we run our AJAX call to the OpenWeatherMap API
 $.ajax({

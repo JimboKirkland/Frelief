@@ -15,6 +15,8 @@ function initMap() {
   window.onload =  geocodeAddress(geocoder, map);
 }
 
+var markerId = "";
+
 //Set markers
 function geocodeAddress(geocoder, resultsMap) {
   database.ref().on("child_added", function(snap) {
@@ -35,14 +37,17 @@ function geocodeAddress(geocoder, resultsMap) {
         "<p>" + address + "</p>"+
         "<p>" + city + ", " + state + ", " + zip + "</p>"+
         "</div></div></div>";
-
-            var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        });
+    var infowindow = new google.maps.InfoWindow({content: contentString});
 
     //Set full address
     address = snap.val().address+", "+snap.val().city+", "+snap.val().state+", "+snap.val().zip;
+  });
+}
 
+$('#post-container').on('click', '.post', function(){
+  console.log($(this).attr("value"))
+  markerId = $(this).attr("value")
+  geocodeAddress(geocoder)
     geocoder.geocode({'address': address}, function(results, status) {
       if (status === 'OK') {
         resultsMap.setCenter(results[0].geometry.location);
@@ -54,8 +59,8 @@ function geocodeAddress(geocoder, resultsMap) {
         console.log('Geocode was not successful for the following reason: ' + status);
       }
     });
-  });
-}
+  }
+})
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
