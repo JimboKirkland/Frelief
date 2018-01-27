@@ -8,7 +8,6 @@ $.ajax({
     url: queryURL,
     method: "GET"
   }).done(function(response) {
-    console.log(response);
     $('#weather-icon').html("<img src='"+response.current_observation.icon_url+"'>");
     $('#weather-temp').text(response.current_observation.temp_f);
     $('#weather-weather').text(response.current_observation.weather);
