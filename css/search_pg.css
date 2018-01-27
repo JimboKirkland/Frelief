@@ -11,19 +11,20 @@ body {
 #post {
   height: 80%;
   width: 80%;
-  background-color: #ffffff;
+  background-color: #3E5E70;
   position: absolute;
   top: -80%;
   left: 10%;
   z-index: 1;
-  border: 5px solid #f2f2f2;
+  border: 5px solid #3E5E70;
   border-radius: 10px;
 }
 
 #close {
   width: 100%;
   padding: 0 5px 4px;
-  background-color: #f2f2f2;
+  background-color: #3E5E70;
+  color: #ffffff;
 }
 
 #post-offering {
@@ -42,13 +43,19 @@ hr {
 }
 
 #data-container {
-  margin: 15px;
-  height: 55%;
+  padding: 15px;
+  height: 57%;
+  background-color: #ffffff;
+}
+
+#post-phone {
+  color: #C2ECAD;
 }
 
 #map {
   position: absolute;
   bottom: 0;
+  margin-bottom: 5px;
   width: 100%;
   height: 40%;
 }
@@ -139,7 +146,7 @@ hr {
   width: 120px;
   height: 120px;
   padding: 5px;
-  background-color: rgb(222, 222, 222);
+  background-color: #C2ECAD;
 }
 
 .offering {
