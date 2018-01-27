@@ -23,6 +23,7 @@ $('#post-container').on('click', '.post', function(resultsMap){
             map: map,
             position: myLatLng,
             center: myLatLng,
+            animation: google.maps.Animation.DROP,
           });
           markers.push(marker);
         }
