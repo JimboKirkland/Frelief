@@ -63,18 +63,14 @@ function geocodeAddress(geocoder, resultsMap) {
 
     geocoder.geocode({'address': address}, function(results, status) {
       if (status === 'OK') {
-        // resultsMap.setCenter(results[0].geometry.location);
+        resultsMap.setCenter(results[0].geometry.location);
         var marker = new google.maps.Marker({
           map: resultsMap,
           position: results[0].geometry.location,
         });
          marker.addListener('click', function() {
-           console.log(this)
-        if (this.visible == false){
+
           infowindow.open(map, marker);
-        } else {
-          infowindow.close(map, marker);
-        }
           });
 
       } else {
